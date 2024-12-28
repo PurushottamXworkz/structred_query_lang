@@ -124,7 +124,26 @@ team_size int,
 team_name varchar(20)
 );
 
-insert into project (Pname,Pnum,PManager,team_size,team_name) values('News_Portal',10,'Dr.Vasu',45,15);
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('News_App',10,'Vasuki',15,'team Sadak');
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('Recipe_App',2,'Arun',10,'team Kota');
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('Zepto_App',10,'Varun',10,'team Aarya');
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('Zudo_App',5,'Abhishekh',5,'team Aadya');
+
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('Uber_App',8,'Abhi',7,'team AJ');
+
+insert into project (Pname,Pnum,PManager,team_size,team_name) values('Ullas_App',6,'Pacchu',8,'team Pacchu');
+
+insert into project values('React_App',2,'Pradoosh',2,'team Zepto');
+insert into project values('Hepto_App',10,'Pranav',4,'team Hazar');
+
+insert into project values('Max_App',10,'Sudeep',10,'team Kiccha');
+
+insert into project values('Creation_App',1,'Arjun',5,'team Krish');
+
+
+select * from project;
+
+
 
 
 
