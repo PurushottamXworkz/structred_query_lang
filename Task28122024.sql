@@ -80,6 +80,17 @@ values(109,'Kiran','Kumar','Mallappa','Lakshmi',1870557415241,'1989-10-05','Tela
 insert into lecturer(id,fname,lname,father,mother,adhar,dob,address,bankName,accountNum)
 values(110,'Nisha','Moksha','Maria','Suvarna',2862557415240,'2000-11-28','Karnataka','IDBI Bank',789040100563282);
 
+update lecturer set lname='mokashi' where id=110;
+
+update lecturer set lname='mokash' , father='Hanumanth' where id=110;
+
+update lecturer set lname='Savadi' , father='Hanumanth' where id=109;
+
+delete from lecturer where id=109;
+
+delete from lecturer;
+
+rollback ;
 
 select * from lecturer;
 
