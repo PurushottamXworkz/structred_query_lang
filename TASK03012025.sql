@@ -97,3 +97,35 @@ insert into campus (name_of_campus,campus_code,campus_address,campus_authority) 
 
 desc campus;
 select * from campus;
+
+
+create table designation_of_emp(
+emp_designation varchar(10) primary key,
+empl_id varchar(20), foreign key(empl_id) references employee(emp_id));
+
+desc designation_of_emp;
+
+select * from employee;
+
+insert into designation_of_emp values("Professor","Rob00231");
+insert into designation_of_emp values("Senior Dev","Rob00231");
+insert into designation_of_emp values("Junior Dev","Rob00231");
+insert into designation_of_emp values("Backend ","Rob00231");
+insert into designation_of_emp values("Guide","Rob00231");
+insert into designation_of_emp values("Technique","Rob00231");
+
+select * from designation_of_emp;
+
+create table employee(
+emp_id varchar(20) primary key,
+emp_name varchar(20) not null,
+emp_address varchar(20) not null,
+emp_department varchar(20) not null
+);
+
+
+alter table employee add emp_salary int;
+alter table employee add dno varchar(10);
+alter table employee add foreign key(dno) references department(dno);
+desc employee;
+
