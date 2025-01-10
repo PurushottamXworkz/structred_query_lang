@@ -156,6 +156,42 @@ select * from movies cross join education cross join songs;
 select count(*) from movies cross join education cross join songs;
 
 
+select * from movies inner join songs where movies.admin_id=songs.admin_id;
+select count(*) from movies inner join songs where movies.admin_id= songs.admin_id;
+
+select * from movies natural join songs;
+select count(*) from movies natural join songs;
+
+select * from admin natural join movies;
+select * from admin natural join education;
+select * from admin natural join news;
+select * from admin natural join songs;
+
+select * from movies natural join education;
+select * from education natural join news;
+select * from songs natural join admin;
+
+
+select * from movies left outer join songs on movies.admin_id=songs.admin_id; 
+select count(*) from songs s left join movies m on s.admin_id=m.admin_id;
+
+
+select * from songs left outer join education on songs.admin_id=education.admin_id;
+select count(*) from songs left outer join education on songs.admin_id=education.admin_id;
+
+select * from news n left outer join movies m on m.admin_id=n.admin_id;
+select count(*) from news n left outer join movies on n.admin_id=movies.admin_id;  
+
+select * from news right outer join songs on news.admin_id=songs.admin_id; 
+select * from movies right join news on news.admin_id=movies.admin_id;
+
+select * from news n right outer join movies m on m.admin_id=n.admin_id;
+select count(*) from news n right outer join movies on n.admin_id=movies.admin_id;  
+
+
+
+
+
 
 
 
