@@ -46,3 +46,5 @@ select count(*) from user u inner join admin a where u.admin_id=a.admin_id;
 
 
 
+
+
