@@ -189,9 +189,54 @@ select * from news n right outer join movies m on m.admin_id=n.admin_id;
 select count(*) from news n right outer join movies on n.admin_id=movies.admin_id;  
 
 
+-- full join 
+select * from news left join movies on news.admin_id=movies.admin_id
+ union
+select * from news right join songs on news.admin_id=songs.admin_id;
 
 
+-- self join 
+select *
+from movies as movie1  
+join movies as movie2 
+on movie1.movies_id =movie2.movies_id; 
 
+select movie1.movie_name , movie1.movie_by
+from movies as movie1
+join movies as movie2
+on movie1.movie_by=movie2.movie_by;
+
+select education1.video_id,education1.content_by,education1.video_name
+from education as education1
+join education as education2
+on education1.content_by=education2.content_by;
+
+select admin1.admin_name,admin1.admin_email from admin as admin1
+join admin as admin2
+on admin1.admin_name=admin2.admin_name;
+
+select  song1.song_id, song1.song_name
+from songs as song1
+join songs as song2
+on song1.song_name=song2.song_name;
+
+
+-- subquery 
+select * from movies;
+select length_of_movies from movies order by length_of_movies desc;
+select min(length_of_movies) from movies  order by length_of_movies asc;
+select length_of_movies,movie_name from movies;
+select min(length_of_movies) from movies;
+
+select length_of_movies as second_min_length from movies where length_of_movies >(
+select min(length_of_movies) from movies);
+
+select min(length_of_movies) as second_min_length from movies where length_of_movies >(
+select min(length_of_movies) from movies);
+
+select max(length_of_movies) as third from movies where length_of_movies <(
+select max(length_of_movies) as second_max_length from movies where length_of_movies <(
+select max(length_of_movies) from movies));
 
 
 
